@@ -4,7 +4,7 @@ VSCode Extension which fetches the test cases and code snippet form leetcode pro
 ## Features
 
 Fetches test cases and code snippet ensuring that user have to write minimum code.
-<br/>Stores the test cases in a separate file.
+<br/>Stores the test cases in a separate file for later use.
 <br/>Allows user to write custom testcases.
 
 ## Requirements
