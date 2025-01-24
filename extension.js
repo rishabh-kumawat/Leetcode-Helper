@@ -289,7 +289,7 @@ function activate(context) {
 				}
 				
 				testCases = await extractTestcases();
-				console.log(testCases);
+				// console.log(testCases);
 				
 				await getCodeSnippet(language);
 				// console.log(tempSnippet);	
@@ -573,13 +573,13 @@ def print_tree(root):
 									.split(',')
 									.map(arg => arg.trim().split(/\s+/)[0]);
 
-				console.log(functionString);
-				console.log(argumentTypes);
+				// console.log(functionString);
+				// console.log(argumentTypes);
 				const isLinkedList = argumentTypes.includes("ListNode*");
 				const isTree = argumentTypes.includes("TreeNode*");
 
 				const functionName = functionString.match(/^\s*[\w<>*]+\s+([\w_]+)\s*\(/)?.[1];
-				console.log(functionName);
+				// console.log(functionName);
 				
 				const returnType = (cltempSnippet[temi+1].split(' '))[0];
 				// console.log(returnType);
