@@ -122,7 +122,7 @@ function activate(context) {
 				let browser = await puppeteer.launch({
 						headless: false,
 						defaultViewport: null,
-						args: ['--disable-gpu', '--no-sandbox', '--disable-software-rasterizer']
+						args: ['--disable-gpu', '--no-sandbox', '--disable-software-rasterizer','--start-maximized']
 					});
 				
 				const page = await browser.newPage();
