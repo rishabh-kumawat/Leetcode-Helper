@@ -142,6 +142,10 @@ function activate(context) {
 						const parseValue = (value) => {
 							if (typeof value !== 'string') return value;
 							value = value.trim();
+
+							if (value === '[]') {
+								return [];
+							}
 							
 							if (value.startsWith('[') && value.endsWith(']')) {
 								try {
@@ -169,7 +173,7 @@ function activate(context) {
 						const extractInputs = (text) => {
 							text = text.replace(/^Input:?\s*/i, '').trim();
 							
-							const varRegex = /(\w+)\s*=\s*("[^"]+"|'[^']+'|\[[^\]]+\]|-?\d+)/g;
+							const varRegex = /(\w+)\s*=\s*("[^"]*"|'[^']*'|\[[^\]]*]|-?\d+)/g;
 							const variables = {};
 							let match;
 							let hasVariables = false;
@@ -563,7 +567,7 @@ def print_tree(root):
 			
 				const temi = cltempSnippet.indexOf("public:");
 				
-				cltempSnippet[temi+1] = cltempSnippet[temi+1].replace("&","&&");
+				cltempSnippet[temi+1] = cltempSnippet[temi+1].replace(/(?<!&)&(?!&)/g, '&&');
 				// console.log(cltempSnippet[temi+1]);
 				
 				
