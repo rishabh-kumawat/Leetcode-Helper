@@ -1,0 +1,61 @@
+{
+  "name": "leetcode-helper-lh-",
+  "displayName": "Leetcode Helper(LH)",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "leetcode-helper-lh-.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "leetcode-helper-lh-.fetchTestCases",
+        "category": "LH",
+        "title": "Fetch Test Cases"
+      },
+      {
+        "command": "leetcode-helper-lh-.runTestCases",
+        "category": "LH",
+        "title": "Run Test Cases"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "General Settings",
+      "properties": {
+          "general.saveLocation": {
+              "type": "string",
+              "default": "default/path",
+              "description": "Default save location for files."
+          }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.16.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
+    "puppeteer": "^24.1.0"
+  }
+}
