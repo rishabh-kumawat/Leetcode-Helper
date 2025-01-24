@@ -748,7 +748,7 @@ int main() {
 					codeSnippet = headers + codeSnippet + print;
 				}
 				else{
-					codeSnippet = headers + codeSnippet;
+					codeSnippet = headers + codeSnippet + print;
 				}
 
 				let callingSnippet = "\n    Solution solution;";
