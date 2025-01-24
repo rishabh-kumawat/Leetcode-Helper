@@ -11,5 +11,7 @@ Fetches test cases and code snippet ensuring that user have to write minimum cod
 
 To download node packages: npm install
 <br/>To run cpp file, ensure gcc version greater than 9.1
+<br/>To run python file, ensure proper setup in vs code.
+<br/>***Do not minimize or close browser while fetching.***
 
 **Enjoy!**
